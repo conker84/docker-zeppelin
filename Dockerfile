@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER Andrea Santurbano <santand@gmail.com>
 
-RUN apt-get -y update
+RUN apt-get update -y
 
 RUN apt-get install -y git wget unzip curl openjdk-7-jdk npm libfontconfig
 
