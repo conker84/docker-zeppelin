@@ -24,7 +24,6 @@ RUN git clone https://github.com/apache/incubator-zeppelin.git $ZEPPELIN_HOME
 
 WORKDIR $ZEPPELIN_HOME
 RUN git pull
-#RUN sudo su
 RUN mvn clean package -Pspark-1.5 -Dspark.version=1.5.2 -Dhadoop.version=2.6.0 -Phadoop-2.6 -DskipTests
 
 EXPOSE 8080 8081
