@@ -28,4 +28,4 @@ RUN mvn clean package -Pspark-1.5 -Dspark.version=1.5.2 -Dhadoop.version=2.6.0 -
 
 EXPOSE 8080 8081 4040
 
-CMD ["/bin/zeppelin.sh"]
+CMD ["/incubator-zeppelin/bin/zeppelin.sh"]
