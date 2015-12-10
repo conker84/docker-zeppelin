@@ -3,4 +3,19 @@ The image is created starting from [master branch](https://github.com/apache/inc
 ```shell
 mvn clean package -Pspark-1.5 -Dspark.version=1.5.2 -Dhadoop.version=2.6.0 -Phadoop-2.6 -DskipTests
 ```
+
+Simple instructions to build the project
+
+1. Build the project from Git Hub:
+
+  ```shell
+      docker build -t conker84/zeppelin https://github.com/conker84/docker-zeppelin.git
+  ```
+2. Run the project:
+
+  ```shell
+      docker run -i -t -p 8080:8080 -p 8081:8081 conker84/zeppelin
+  ```
+3. Open the browser at **http://your_docker_machine_ip:8080**
+
 Enjoy!
