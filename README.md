@@ -6,7 +6,7 @@ mvn clean package -Pspark-1.5 -Dspark.version=1.5.2 -Dhadoop.version=2.6.0 -Phad
 
 Simple instructions to build the project
 
-1. Build the project from Git Hub:
+1. Build the project from GitHub:
 
   ```shell
       docker build -t conker84/zeppelin https://github.com/conker84/docker-zeppelin.git
