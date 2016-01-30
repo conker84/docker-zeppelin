@@ -6,7 +6,7 @@ RUN apt-get update -y
 
 RUN apt-get install -y git wget unzip curl openjdk-7-jdk npm libfontconfig
 
-ENV MAVEN_VERSION 3.3.1
+ENV MAVEN_VERSION 3.3.9
 RUN curl -sSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xzf - -C /usr/share \
   && mv /usr/share/apache-maven-$MAVEN_VERSION /usr/share/maven \
   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
@@ -24,7 +24,7 @@ RUN git clone https://github.com/apache/incubator-zeppelin.git $ZEPPELIN_HOME
 
 WORKDIR $ZEPPELIN_HOME
 RUN git pull
-RUN mvn clean package -Pspark-1.6 -Phadoop-2.6 -DskipTests
+RUN mvn clean package -Pspark-1.6 -Phadoop-2.4 -DskipTests
 
 EXPOSE 8080 8081 4040
 
