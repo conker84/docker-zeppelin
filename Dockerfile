@@ -20,7 +20,7 @@ ENV PATH $ZEPPELIN_HOME/zeppelin-web/node:$PATH
 ENV PATH $ZEPPELIN_HOME/zeppelin-web/node_modules/grunt-cli/bin:$PATH
 
 RUN git config --global url."https://".insteadOf git://
-RUN git clone https://github.com/apache/incubator-zeppelin/tree/branch-0.5.6 $ZEPPELIN_HOME
+RUN git clone -b branch-0.5.6 https://github.com/apache/incubator-zeppelin.git $ZEPPELIN_HOME
 
 WORKDIR $ZEPPELIN_HOME
 RUN git pull
