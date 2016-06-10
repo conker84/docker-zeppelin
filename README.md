@@ -1,5 +1,5 @@
 Lightweight dockerization of [Apache Zeppelin](http://zeppelin.incubator.apache.org/) project.
-The image is created starting from [master branch](https://github.com/apache/incubator-zeppelin) source built by the following command:
+The image is created starting from [branch v0.5.6](https://github.com/apache/zeppelin/tree/branch-0.5.6) source built by the following command:
 ```shell
 mvn clean package -Pspark-1.6 -Phadoop-2.4 -DskipTests
 ```
