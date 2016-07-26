@@ -2,11 +2,11 @@ FROM ubuntu:14.04
 
 MAINTAINER Andrea Santurbano <santand@gmail.com>
 
-RUN add-apt-repository ppa:openjdk-r/ppa
+RUN add-apt-repository -y ppa:webupd8team/java
 
 RUN apt-get update -y
 
-RUN apt-get install -y git wget unzip curl openjdk-8-jdk npm libfontconfig
+RUN apt-get install -y git wget unzip curl oracle-java8-installer npm libfontconfig
 
 ENV MAVEN_VERSION 3.3.9
 RUN curl -sSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xzf - -C /usr/share \
