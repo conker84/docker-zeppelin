@@ -2,6 +2,8 @@ FROM ubuntu:14.04
 
 MAINTAINER Andrea Santurbano <santand@gmail.com>
 
+RUN apt-get install software-properties-common
+
 RUN add-apt-repository -y ppa:webupd8team/java
 
 RUN apt-get update -y
