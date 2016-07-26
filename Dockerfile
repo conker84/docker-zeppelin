@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER Andrea Santurbano <santand@gmail.com>
 
-RUN apt-get install python-software-properties
+RUN apt-get install python3-software-properties
 
 RUN add-apt-repository -y ppa:webupd8team/java
 
