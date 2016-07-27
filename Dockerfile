@@ -19,13 +19,13 @@ RUN curl -sSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binari
 ENV MAVEN_HOME /usr/share/maven
 ENV PATH .:$PATH
 
-ENV ZEPPELIN_HOME /incubator-zeppelin
+ENV ZEPPELIN_HOME /zeppelin
 ENV PATH $PATH:$JAVA_HOME/bin
 ENV PATH $ZEPPELIN_HOME/zeppelin-web/node:$PATH
 ENV PATH $ZEPPELIN_HOME/zeppelin-web/node_modules/grunt-cli/bin:$PATH
 
 RUN git config --global url."https://".insteadOf git:// \
-  && git clone https://github.com/apache/incubator-zeppelin.git $ZEPPELIN_HOME
+  && git clone https://github.com/apache/zeppelin.git $ZEPPELIN_HOME
 
 WORKDIR $ZEPPELIN_HOME
 RUN git pull
@@ -33,4 +33,4 @@ RUN mvn clean package -Pspark-2.0 -Phadoop-2.4 -Pyarn -Ppyspark -Pscala-2.11
 
 EXPOSE 8080 8081 4040
 
-CMD ["/incubator-zeppelin/bin/zeppelin.sh"]
+CMD ["/zeppelin/bin/zeppelin.sh"]
