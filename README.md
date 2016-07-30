@@ -14,7 +14,7 @@ Simple instructions to build the project
 2. Run the project:
 
   ```shell
-      docker run -i -t -p 8080:8080 -p 8081:8081 conker84/zeppelin
+      docker run -i -t -p 8080:8080 -p 8081:8081 -p 4040:4040 conker84/zeppelin
   ```
 3. Open the browser at **http://your_docker_machine_ip:8080**
 
