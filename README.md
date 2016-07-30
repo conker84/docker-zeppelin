@@ -1,7 +1,7 @@
 Lightweight dockerization of [Apache Zeppelin](http://zeppelin.incubator.apache.org/) project.
 The image is created starting from [master branch](https://github.com/apache/incubator-zeppelin) source built by the following command:
 ```shell
-mvn clean package -Pspark-1.6 -Phadoop-2.4 -DskipTests
+mvn clean package -Pspark-2.0 -Phadoop-2.4 -Pyarn -Ppyspark -Pscala-2.11
 ```
 
 Simple instructions to build the project
