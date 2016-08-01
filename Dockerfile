@@ -29,7 +29,7 @@ RUN git config --global url."https://".insteadOf git:// \
 
 WORKDIR $ZEPPELIN_HOME
 RUN git pull
-RUN mvn clean package -Pspark-2.0 -Phadoop-2.4 -Pyarn -Ppyspark -Pscala-2.11
+RUN mvn clean package -Pspark-2.0 -Phadoop-2.4 -Pyarn -Ppyspark -Pscala-2.11 -DskipTests
 
 EXPOSE 8080 8081 4040
 
