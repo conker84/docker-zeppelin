@@ -33,4 +33,4 @@ RUN mvn clean package -Pspark-1.6 -Phadoop-2.4 -DskipTests
 
 EXPOSE 8080 8081 4040
 
-CMD ["/incubator-zeppelin/bin/zeppelin.sh"]
+CMD ["/zeppelin/bin/zeppelin.sh"]
